@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Rescate - Refugio Animal</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Control de Rescate y Adopción Animal</h1>
+        <p>Registro de animales rescatados</p>
+    </header>
+
+    <nav aria-label="Menú principal">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Registrar rescate</a></li>
+            <li><a href="rescates.html">Consultar rescates</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulario de registro de rescate</h2>
+
+            <p>
+                Complete la información del animal encontrado.
+                Todos los campos son obligatorios.
+            </p>
+
+            <form action="reportar.html" method="get">
+
+                <p>
+                    <label for="nombre">
+                        Nombre provisional o título del caso:
+                    </label>
+                    <input type="text" id="nombre"
+                           name="nombre" required maxlength="100">
+                </p>
+
+                <p>
+                    <label for="categoria">
+                        Categoría del animal:
+                    </label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Seleccione una categoría</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="fauna">Fauna silvestre</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Nivel de urgencia médica:</legend>
+
+                    <input type="radio" id="alta"
+                           name="urgencia" value="alta" required>
+                    <label for="alta">Alta</label>
+
+                    <input type="radio" id="media"
+                           name="urgencia" value="media">
+                    <label for="media">Media</label>
+
+                    <input type="radio" id="baja"
+                           name="urgencia" value="baja">
+                    <label for="baja">Baja</label>
+                </fieldset>
+
+                <p>
+                    <label for="descripcion">
+                        Descripción del estado del animal:
+                    </label>
+                </p>
+
+                <p>
+                    <textarea id="descripcion" name="descripcion"
+                              rows="6" cols="45"
+                              required maxlength="1000"
+                              placeholder="Describa cómo se encontró al animal"></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Enviar reporte</button>
+                    <button type="reset">Limpiar formulario</button>
+                </p>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Información importante</h2>
+
+            <article>
+                <h3>Seguimiento del rescate</h3>
+                <p>
+                    Los reportes serán gestionados por el administrador
+                    del refugio, quien podrá asignar responsables
+                    para la atención del animal.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Sistema de Control de Rescate y Adopción Animal
+            - Proyecto académico UTM 2026
+        </p>
+    </footer>
+
+</body>
+</html>
